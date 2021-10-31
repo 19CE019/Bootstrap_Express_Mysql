@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= title %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h2><%= title %></h2>
+        <form action="/save" method="post">
+          <div class="form-group">
+            <label for="name">CourseId:</label>
+            <input type="text" class="form-control" id="CourseId" placeholder="Enter course id" name="CourseId" required>
+          </div>
+          <div class="form-group">
+              <label>Department:</label><br>
+              <input class="form-check-input" type="radio" name="CE" value="CE">
+              <label class="form-check-label" for="Department">CE</label>
+            </div>
+            <div class="form-group">
+              <input class="form-check-input" type="radio" name="IT" value="IT">
+              <label class="form-check-label" for="IT">IT</label>
+            </div>
+      
+            <div class="form-group">          
+              <label>Institute:</label><br>
+              <input class="form-check-input" type="checkbox" value="CSPIT">
+              <label class="form-check-label" for="Institute">
+                CSPIT
+              </label>
+            </div>
+            <div class="form-group">
+              <input class="form-check-input" type="checkbox" value="DEPSTAR">
+              <label class="form-check-label" for="Institute">
+                DEPSTAR
+              </label>
+            </div>
+      
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="true" name="University">
+                University
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li class="dropdown-item" value="Charusat">Charusat</li>
+                <li class="dropdown-item" value="Nirma">Nirma</li>
+                <li class="dropdown-item" value="DAAICT">DAAICT</li>
+              </ul>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+      
+</body>
+</html>
